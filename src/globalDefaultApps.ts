@@ -124,6 +124,8 @@ export const blackListAppIDs: string[] = [
   'deltazero.amarok', // Amarok 更新提示在 https://i.gkd.li/i/17812411 误触
   'com.quark.browser', // 夸克浏览器 开屏广告误触 https://i.gkd.li/i/18221460
   'bin.mt.plus', // MT管理器
+  'com.pikcloud.pikpak', // PikPak
+  'com.deepseek.chat', // DeepSeek
 
   'com.canghai.haoka',
   'com.xy.td',
@@ -210,6 +212,7 @@ export const blackListAppIDs: string[] = [
   'com.xiaomi.cajlauncher', // CAJViewer PC
   'com.mi.car.padapp', // 小米汽车扩展屏
   'com.android.calendar', // 日历
+  'com.mi.earphone', // 小米耳机
 
   // 三星
   'com.samsung.android.app.cameraassistant',
@@ -263,6 +266,7 @@ export const openAdBlackListAppIDs = new Set([
 export const updateBlackListAppIDs = new Set([
   ...blackListAppIDs,
   'info.muge.appshare', // AppShare
+  'com.jingdong.app.mall', // 京东
   ...filterAppsByGroup(apps, '更新提示'),
 ]);
 

@@ -2,8 +2,11 @@
 
 ---
 
+## ~~已停止维护~~ 继续维护
+
 ## 声明
 
+- **禁止在国内平台传播**
 - **本仓库仅供本人学习使用，其他人的任何行为均与本人无关**
 - **精力有限，随缘更新**
 
@@ -17,7 +20,7 @@
 
 - **交流讨论 -> [点击查看或开启讨论](https://github.com/AIsouler/GKD_subscription/discussions)**
 
-- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [API说明](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./Selectors.md)，让规则写起来更轻松！**
+- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./Selectors.md)，让规则写起来更轻松！**
 
 ## 订阅
 
@@ -35,9 +38,9 @@ https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIso
 https://raw.githubusercontent.com/AIsouler/GKD_subscription/main/dist/AIsouler_gkd.json5
 ```
 
-- 当前版本: v175
+- 当前版本: v190
 
-- 当前订阅文件已适配 787 个应用，共有 1832 应用规则组，3 全局规则组
+- 当前订阅文件已适配 796 个应用，共有 1857 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -47,7 +50,7 @@ https://raw.githubusercontent.com/AIsouler/GKD_subscription/main/dist/AIsouler_g
 
 ## 其他
 
-- 在 [GKD官网](https://gkd.li/) 查看 [GKD基础使用教程](https://gkd.li/guide/) 、[常见问题](https://gkd.li/guide/faq) 以及 [API说明](https://gkd.li/api/)
+- 在 [GKD官网](https://gkd.li/) 查看 [GKD基础使用教程](https://gkd.li/guide/) 、[常见问题](https://gkd.li/guide/faq) 以及 [API文档](https://gkd.li/api/)
 
 - 查看 [规则编写教程](https://github.com/Snoopy1866/blogs/blob/main/software/gkd/gkd-rule-tutorial/gkd-rule-tutorial.md) By [@Snoopy1866](https://github.com/Snoopy1866)
 
@@ -59,7 +62,7 @@ https://raw.githubusercontent.com/AIsouler/GKD_subscription/main/dist/AIsouler_g
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=175)
+![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=190)
 
 ## Star History
 

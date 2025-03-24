@@ -46,77 +46,39 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18245546',
           ],
         },
-        {
-          key: 2,
-          position: {
-            left: 'width * 0.8506',
-            top: 'width * 0.1784',
-          },
-          matches: '[vid="main_splash_ad"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/48815af8-5660-40f3-850a-0b86b83ac44b',
-          snapshotUrls: 'https://i.gkd.li/i/18361947',
-        },
       ],
     },
     {
       key: 0,
       name: '分段广告-信息流广告',
-      desc: '点击卡片右上角按钮->免广告-点击关闭->选择关闭原因-点击不感兴趣',
-      matchRoot: true,
       fastQuery: true,
       activityIds: [
-        'com.coolapk.market.view.main.MainActivity',
-        'com.coolapk.market.view.node.DynamicNodePageActivity',
-        'com.coolapk.market.view.feed.FeedDetailActivityV8',
-        'com.bytedance.sdk.openadsdk.core.dislike.ui.f',
+        '.view.feed.FeedDetailActivityV8',
+        '.view.main.MainActivity',
+        '.view.node.DynamicNodePageActivity',
       ],
       rules: [
         {
-          key: 1,
-          name: '点击右上角x按钮',
-          excludeMatches: [
-            '[text="回复"] + [text="发布"]',
-            '[text="创建收藏单"][visibleToUser=true]',
-            '[vid="submit_view"][text="发布"]',
-          ],
-          matches: [
-            '[text*="广告" || text="推广"][visibleToUser=true]',
-            '[vid="close_view"]',
-          ],
+          key: 0,
+          matches: ['[vid="coolapk_card_view"]', '[vid="close_view"]'],
           snapshotUrls: [
-            'https://i.gkd.li/i/12707506',
-            'https://i.gkd.li/i/12642094',
-            'https://i.gkd.li/i/12642148',
-            'https://i.gkd.li/i/12774771',
-            'https://i.gkd.li/i/13257987',
-            'https://i.gkd.li/i/17450282',
+            'https://i.gkd.li/i/19004644',
+            'https://i.gkd.li/i/19004652',
+            'https://i.gkd.li/i/19004663',
+            'https://i.gkd.li/i/19005176',
           ],
           excludeSnapshotUrls: [
-            'https://i.gkd.li/i/14996359', // 避免误触
-            'https://i.gkd.li/i/15159886', // 避免误触
-            'https://i.gkd.li/i/15587119', // 避免误触
+            'https://i.gkd.li/i/14996359',
+            'https://i.gkd.li/i/15159886',
+            'https://i.gkd.li/i/15587119',
           ],
         },
         {
-          preKeys: [1],
-          key: 2,
-          name: '点击[不感兴趣]/[关闭]',
-          matches: '[text="不感兴趣" || text="关闭"]',
+          preKeys: [0],
+          matches: '@[clickable=true] > [text="不感兴趣"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/14959519',
-            'https://i.gkd.li/i/14964859',
-          ],
-        },
-        {
-          preKeys: [1, 2],
-          key: 3,
-          name: '选择关闭原因-点击不感兴趣',
-          matches: '@LinearLayout > TextView[text="不感兴趣"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12472633',
-            'https://i.gkd.li/i/12655713',
-            'https://i.gkd.li/i/12660759',
-            'https://i.gkd.li/i/12706437',
+            'https://i.gkd.li/i/19004649',
+            'https://i.gkd.li/i/19004661',
           ],
         },
       ],
