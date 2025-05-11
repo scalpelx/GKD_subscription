@@ -292,10 +292,11 @@ export default defineGkdApp({
     },
     {
       key: 17,
-      name: '功能类-关闭免密支付开关',
+      name: '全屏广告-关闭免密支付广告',
       actionMaximum: 1,
       rules: [
         {
+          key: 0,
           fastQuery: true,
           activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
           matches:
@@ -306,6 +307,17 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14630825', // 关闭后
             'https://i.gkd.li/i/17107841',
           ],
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+          matches: [
+            '[text^="开通"][text$="免密支付"][visibleToUser=true]',
+            '@[clickable=true] > [text="关闭"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/c8388cd5-a97f-4683-9ef1-2caa0a24de91',
+          snapshotUrls: 'https://i.gkd.li/i/19449399',
         },
       ],
     },
@@ -436,6 +448,22 @@ export default defineGkdApp({
             '@View[id=null][text=null][childCount=0][visibleToUser=true] < ViewGroup[id=null][text=null][childCount=1][index=parent.childCount.minus(1)] <7 ViewGroup <2 ViewGroup < ViewGroup < LinearLayout < RelativeLayout < [id="android:id/content"]',
           exampleUrls: 'https://e.gkd.li/a243e31f-f1b5-4689-8d1a-c53250be651e',
           snapshotUrls: 'https://i.gkd.li/i/17141999',
+        },
+      ],
+    },
+    {
+      key: 25,
+      name: '功能类-自动授权登录',
+      rules: [
+        {
+          fastQuery: true,
+          actionMaximum: 1,
+          action: 'clickCenter', // clickNode可能无效
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+          matches:
+            '[text="支付宝授权"] >3 @[childCount=0][text="同意"] <<n [id="com.alipay.mobile.nebula:id/h5_pc_container"]',
+          snapshotUrls: 'https://i.gkd.li/i/17376764',
         },
       ],
     },

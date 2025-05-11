@@ -7,19 +7,22 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
-      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       priorityTime: 10000,
       rules: [
         {
-          action: 'clickCenter', // 在极少数情况下, 即使节点是 clickable 的, APP 也不会响应节点点击事件, 此时需要手动设置 clickCenter
-          matches: '[id="cn.soulapp.android:id/c_ad_skip_view_btn"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12833280',
-            'https://i.gkd.li/i/12850094',
-          ],
+          key: 0,
+          fastQuery: true,
+          action: 'clickCenter', // 该快照action: 'click' 无效
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20139575',
+        },
+        {
+          key: 1,
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20139739',
         },
       ],
     },
@@ -125,6 +128,21 @@ export default defineGkdApp({
             'cn.soulapp.android.component.square.post.base.detail.PostDetailActivity',
           matches: '@[clickable=true][visibleToUser=true] >2 [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/i/14359616',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '全屏广告-送礼开聊会话',
+      desc: '自动点击先不聊了',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      rules: [
+        {
+          activityIds: '.component.chat.ConversationActivity',
+          matches: '[vid="cl_gift_normal"] > TextView[vid="tv_btn_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/19448971',
         },
       ],
     },
